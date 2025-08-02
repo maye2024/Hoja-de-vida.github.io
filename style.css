@@ -27,3 +27,8 @@
     transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+header img {
+    width: 200px;
+    height: 400px;
+}
