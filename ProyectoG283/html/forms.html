@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transicion</title>
+
+    <!-- estilos css -->
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="stylesheet" href="../materialize/css/materialize.css">
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="../materialize/js/materialize.js"></script>
+    <script src="../materialize/js/materialize.min.js"></script>
+    <script src="../js/componentesMaterialize.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="glitch-wrapper">
+            <div class="glitch" data-glitch="transicion Energetica">Transicion Energetica Eolica</div>
+        </div>
+    </header>
+    <nav id="nav-menu">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="../img/logo.png" alt=""></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-small-only">
+                <li><a href="../index.html"><i class="material-icons left">view_module</i>Inicio</a></li>
+                <li><a href="sass.html"><i class="material-icons left">contacts</i>Historia</a></li>
+                <li><a href="sass.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
+                <li><a href="forms.html"><i class="material-icons left">dialpad</i>Consultar Consumo</a></li>
+                <!-- <li><a href="sass.html"><i class="material-icons left">search</i>Buscar</a></li> -->
+
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="../index.html"><i class="material-icons left">view_module</i>Inicio</a></li>
+        <li><a href="sass.html"><i class="material-icons left">contacts</i>Historia</a></li>
+        <li><a href="sass.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
+        <li><a href="forms.html"><i class="material-icons left">dialpad</i>Consultar Consumo</a></li>
+        <!-- <li><a href="sass.html"><i class="material-icons left">search</i>Buscar</a></li> -->
+    </ul>
+    <main>
+        <section>
+            <div class="Contenido-forms">
+                <h3>formulario</h3>
+                <hr>
+                <h5>Datos del Usuario</h5>
+                <div class="row " id="Datos_Formulario">
+                    <form class="col s12" id="formulario" name="formulario" action="/guardar_datos"
+                        onsubmit="ObtenerDatos(event)">
+                        <div class="row">
+                            <div class="input-field col s5">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="nombre" name="nombre" type="text" class="validate">
+                                <label for="nombre">Nombre Completo</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">phone</i>
+                                <input id="telefono" name="telefono" type="tel" class="validate">
+                                <label for="telefono">Telefono</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" name="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">home</i>
+                                <select id="ciudad" name="ciudad">
+                                    <option value="" disabled selected>Ciudad</option>
+                                    <option value="Mani">Manizales</option>
+                                    <option value="Bogo">Bogota</option>
+                                    <option value="Med">Medellin</option>
+                                    <option value="Buca">Bucaramanga</option>
+                                    <option value="Cart">Cartagena</option>
+                                    <option value="Cali">Cali</option>
+                                    <option value="Arau">Arauca</option>
+
+                                </select>
+                                <label for="ciudad">Seleccione la ciudad</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">local_airport</i>
+
+                                <select id="pais" name="pais">
+                                    <option value="" disabled selected>Pais</option>
+                                    <option value="col">Colombia</option>
+                                    <!-- <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option> -->
+                                </select>
+                                <label for="pais">Selecione el pais</label>
+                            </div>
+                            <div class="input-field col s3" style="display: flex;">
+                                <i class="material-icons prefix">face</i>
+                                <div style="margin-top: -20px;">
+
+                                    <label for="genero">Genero</label>
+                                </div>
+                                <p>
+                                    <label for="genero">
+                                        <input id="genero" name="genero" value="H" type="radio" checked />
+                                        <span>Hombre</span>
+                                    </label>
+                                </p>
+                                <p style="margin-left: 10px;">
+                                    <label for="genero1">
+                                        <input id="genero1" name="genero" value="M" type="radio" />
+                                        <span>MUjer</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Datos del Consumo </h5>
+                            <p>estimación del porcentaje
+                                de energía renovable en el consumo eléctrico total de un hogar o comunidad.
+                                Para conseguirlo el usuario únicamente deberá ingresar su consumo eléctrico
+                                total (kWh)</p>
+
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">flash_on</i>
+                                <input id="consumo" name="consumo" type="number" class="validate">
+                                <label for="consumo">Consumo (kWh)</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">event_note</i>
+                                <input type="text" id="fecha-inicio" name="fecha-inicio" class="datepicker">
+                                <label for="fecha-inicio">Consumo Desde</label>
+
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">event_available</i>
+                                <input type="text" id="fecha-hasta" name="fecha-hasta" class="datepicker">
+                                <label for="fecha-hasta">Consumo hasta</label>
+
+                            </div>
+                            <!-- Modal Trigger -->
+                            <button type="submit" class="btn ">Consultar <i
+                                    class="material-icons right">send</i></button>
+                            </button>
+
+                            <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Datos del Usuario</h4>
+                        <form class="col s12" id="registro" name="registro" action="/guardar_datos">
+                            <div class="row " id="Datos_Formulario">
+
+                                <div class="row">
+                                    <div class="input-field col s5">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="nombreobtenido" name="nombreobtenido">
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="telobtenido" name="telobtenido" type="tel" class="validate">
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="emailobtenido" name="emailobtenido" type="email" class="validate">
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="ciudadobtenida" name="ciudadobtenida" type="text" class="validate">
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="paisobtenido" name="paisobtenido" type="text" class="validate">
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="generobtenido" name="generobtenido" type="text" class="validate">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h5>Datos del Consumo </h5>
+                                    <p>estimación del porcentaje
+                                        de energía renovable en el consumo eléctrico total de un hogar o comunidad.
+                                        Para conseguirlo el usuario únicamente deberá ingresar su consumo eléctrico
+                                        total (kWh)</p>
+
+                                    <div class="input-field col s3">
+                                        <i class="material-icons prefix">flash_on</i>
+                                        <input id="Consumobtenido" name="Consumobtenido" type="number" class="validate">
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <i class="material-icons prefix">event_note</i>
+                                        <input type="text" id="fechadesdeontenido" name="fechadesdeontenido"
+                                            class="datepicker">
+
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <i class="material-icons prefix">event_available</i>
+                                        <input type="text" id="fechahastaontenido" name="fechahastaontenido"
+                                            class="datepicker">
+
+                                    </div>
+
+                                    <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
