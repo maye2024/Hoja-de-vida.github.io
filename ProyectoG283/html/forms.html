@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="glitch-wrapper">
-            <div class="glitch" data-glitch="transicion Energetica">Transicion Energetica Eolica</div>
+            <div class="glitch" data-glitch="transicion Energetica">Consulte su consumo <br> Energia Eolica</div>
         </div>
     </header>
     <nav id="nav-menu">
@@ -31,25 +31,29 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-small-only">
                 <li><a href="../index.html"><i class="material-icons left">view_module</i>Inicio</a></li>
-                <li><a href="sass.html"><i class="material-icons left">contacts</i>Historia</a></li>
-                <li><a href="sass.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
+                <li><a href="../html/eolica.html"><i class="material-icons left">contacts</i>Historia</a></li>
+                <li><a href="../html/graficas.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
                 <li><a href="forms.html"><i class="material-icons left">dialpad</i>Consultar Consumo</a></li>
                 <!-- <li><a href="sass.html"><i class="material-icons left">search</i>Buscar</a></li> -->
 
             </ul>
         </div>
     </nav>
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-demo"
+        style="background: linear-gradient(90deg, rgb(221, 224, 224) 0%, rgb(251, 253, 252) 50%, rgb(248, 240, 171) 100%);">
         <li><a href="../index.html"><i class="material-icons left">view_module</i>Inicio</a></li>
-        <li><a href="sass.html"><i class="material-icons left">contacts</i>Historia</a></li>
-        <li><a href="sass.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
+        <li><a href="../html/eolica.html"><i class="material-icons left">contacts</i>Historia</a></li>
+        <li><a href="../html/graficas.html"><i class="material-icons left">graphic_eq</i>Graficas</a></li>
         <li><a href="forms.html"><i class="material-icons left">dialpad</i>Consultar Consumo</a></li>
         <!-- <li><a href="sass.html"><i class="material-icons left">search</i>Buscar</a></li> -->
+        <div style="background: cover;">
+            <img src="../img/sidva.png" alt="" style="opacity: 0.5;">
+        </div>
     </ul>
     <main>
         <section>
             <div class="Contenido-forms">
-                <h3>formulario</h3>
+                <h3>Formulario</h3>
                 <hr>
                 <h5>Datos del Usuario</h5>
                 <div class="row " id="Datos_Formulario">
@@ -58,30 +62,30 @@
                         <div class="row">
                             <div class="input-field col s5">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="nombre" name="nombre" type="text" class="validate">
+                                <input id="nombre" name="nombre" type="text" class="validate" required>
                                 <label for="nombre">Nombre Completo</label>
                             </div>
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">phone</i>
-                                <input id="telefono" name="telefono" type="tel" class="validate">
+                                <input id="telefono" name="telefono" type="tel" class="validate" required>
                                 <label for="telefono">Telefono</label>
                             </div>
                             <div class="input-field col s4">
                                 <i class="material-icons prefix">email</i>
-                                <input id="email" name="email" type="email" class="validate">
+                                <input id="email" name="email" type="email" class="validate" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">home</i>
-                                <select id="ciudad" name="ciudad">
+                                <select id="ciudad" name="ciudad" required>
                                     <option value="" disabled selected>Ciudad</option>
-                                    <option value="Mani">Manizales</option>
-                                    <option value="Bogo">Bogota</option>
-                                    <option value="Med">Medellin</option>
-                                    <option value="Buca">Bucaramanga</option>
-                                    <option value="Cart">Cartagena</option>
+                                    <option value="Manizales">Manizales</option>
+                                    <option value="Bogota">Bogota</option>
+                                    <option value="Medellin">Medellin</option>
+                                    <option value="Bucaramanga">Bucaramanga</option>
+                                    <option value="Cartagena">Cartagena</option>
                                     <option value="Cali">Cali</option>
-                                    <option value="Arau">Arauca</option>
+                                    <option value="Arauca">Arauca</option>
 
                                 </select>
                                 <label for="ciudad">Seleccione la ciudad</label>
@@ -89,9 +93,9 @@
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">local_airport</i>
 
-                                <select id="pais" name="pais">
+                                <select id="pais" name="pais" required>
                                     <option value="" disabled selected>Pais</option>
-                                    <option value="col">Colombia</option>
+                                    <option value="Colombia">Colombia</option>
                                     <!-- <option value="2">Option 2</option>
                                     <option value="3">Option 3</option> -->
                                 </select>
@@ -105,42 +109,49 @@
                                 </div>
                                 <p>
                                     <label for="genero">
-                                        <input id="genero" name="genero" value="H" type="radio" checked />
+                                        <input id="genero" name="genero" value="H" type="radio" required />
+                                        <!-- checked -->
                                         <span>Hombre</span>
                                     </label>
                                 </p>
                                 <p style="margin-left: 10px;">
                                     <label for="genero1">
-                                        <input id="genero1" name="genero" value="M" type="radio" />
-                                        <span>MUjer</span>
+                                        <input id="genero1" name="genero" value="M" type="radio" required />
+                                        <span>Mujer</span>
                                     </label>
                                 </p>
+                            </div>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">event_available</i>
+                                <input type="text" id="fecha-hasta" name="fecha-hasta" class="datepicker" required>
+                                <label for="fecha-hasta">Fecha de registro</label>
+
                             </div>
                         </div>
                         <div class="row">
                             <h5>Datos del Consumo </h5>
-                            <p>estimación del porcentaje
+                            <p>Estimación del porcentaje
                                 de energía renovable en el consumo eléctrico total de un hogar o comunidad.
                                 Para conseguirlo el usuario únicamente deberá ingresar su consumo eléctrico
                                 total (kWh)</p>
 
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">flash_on</i>
-                                <input id="consumo" name="consumo" type="number" class="validate">
+                                <input id="consumo" name="consumo" type="number" class="validate" required>
                                 <label for="consumo">Consumo (kWh)</label>
                             </div>
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">event_note</i>
-                                <input type="text" id="fecha-inicio" name="fecha-inicio" class="datepicker">
-                                <label for="fecha-inicio">Consumo Desde</label>
+                                <input type="number" id="fecha-inicio" name="fecha-inicio" class="validate" required>
+                                <label for="fecha-inicio">Periodo Consuno</label>
 
                             </div>
-                            <div class="input-field col s3">
+                            <!-- <div class="input-field col s3">
                                 <i class="material-icons prefix">event_available</i>
                                 <input type="text" id="fecha-hasta" name="fecha-hasta" class="datepicker">
                                 <label for="fecha-hasta">Consumo hasta</label>
 
-                            </div>
+                            </div> -->
                             <!-- Modal Trigger -->
                             <button type="submit" class="btn ">Consultar <i
                                     class="material-icons right">send</i></button>
@@ -150,39 +161,51 @@
 
                         </div>
                     </form>
+
                 </div>
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                        <h4>Datos del Usuario</h4>
-                        <form class="col s12" id="registro" name="registro" action="/guardar_datos">
-                            <div class="row " id="Datos_Formulario">
+                        <h4>Datos ingresados</h4>
 
+                        <form class="col s12" id="registro" name="registro" action="/guardar_datos">
+
+                            <div class="row " id="Datos_Formulario">
+                                <h5>Datos del Usuario</h5>
                                 <div class="row">
-                                    <div class="input-field col s5">
+                                    <div class="input-field col s6">
                                         <i class="material-icons prefix">account_circle</i>
-                                        <input id="nombreobtenido" name="nombreobtenido">
+                                        <input id="nombreobtenido" name="nombreobtenido" readonly>
                                     </div>
-                                    <div class="input-field col s3">
+                                    <div class="input-field col s6">
                                         <i class="material-icons prefix">phone</i>
-                                        <input id="telobtenido" name="telobtenido" type="tel" class="validate">
+                                        <input id="telobtenido" name="telobtenido" type="tel" readonly>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="emailobtenido" name="emailobtenido" type="email" class="validate"
+                                            readonly>
                                     </div>
                                     <div class="input-field col s4">
-                                        <i class="material-icons prefix">email</i>
-                                        <input id="emailobtenido" name="emailobtenido" type="email" class="validate">
+                                        <i class="material-icons prefix">home</i>
+                                        <input id="ciudadobtenida" name="ciudadobtenida" type="text" class="validate"
+                                            readonly>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">local_airport</i>
+                                        <input id="paisobtenido" name="paisobtenido" type="text" class="validate"
+                                            readonly>
+                                    </div>
+                                    <div class="input-field col s2">
+                                        <i class="material-icons prefix">face</i>
+                                        <input id="generobtenido" name="generobtenido" type="text" class="validate"
+                                            readonly>
                                     </div>
                                     <div class="input-field col s4">
-                                        <i class="material-icons prefix">email</i>
-                                        <input id="ciudadobtenida" name="ciudadobtenida" type="text" class="validate">
-                                    </div>
-                                    <div class="input-field col s4">
-                                        <i class="material-icons prefix">email</i>
-                                        <input id="paisobtenido" name="paisobtenido" type="text" class="validate">
-                                    </div>
-                                    <div class="input-field col s4">
-                                        <i class="material-icons prefix">email</i>
-                                        <input id="generobtenido" name="generobtenido" type="text" class="validate">
+                                        <i class="material-icons prefix">event_note</i>
+                                        <input type="text" id="fechahastaontenido" name="fechahastaontenido" readonly>
+
                                     </div>
                                 </div>
                                 <div class="row">
@@ -192,34 +215,111 @@
                                         Para conseguirlo el usuario únicamente deberá ingresar su consumo eléctrico
                                         total (kWh)</p>
 
-                                    <div class="input-field col s3">
+                                    <div class="input-field col s4">
                                         <i class="material-icons prefix">flash_on</i>
-                                        <input id="Consumobtenido" name="Consumobtenido" type="number" class="validate">
+                                        <input id="Consumobtenido" name="Consumobtenido" type="number" class="validate"
+                                            readonly>
                                     </div>
-                                    <div class="input-field col s3">
+                                    <div class="input-field col s4">
                                         <i class="material-icons prefix">event_note</i>
-                                        <input type="text" id="fechadesdeontenido" name="fechadesdeontenido"
-                                            class="datepicker">
+                                        <input type="number" id="fechadesdeontenido" name="fechadesdeontenido" readonly>
 
                                     </div>
-                                    <div class="input-field col s3">
+                                    <!-- <div class="input-field col s4">
                                         <i class="material-icons prefix">event_available</i>
                                         <input type="text" id="fechahastaontenido" name="fechahastaontenido"
-                                            class="datepicker">
+                                             readonly>
 
-                                    </div>
+                                    </div> -->
 
                                     <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+
                             </div>
                         </form>
+
                     </div>
+
+                    <div class="modal-footer">
+                        <button href="#!" class="modal-close waves-effect btn btn-primary">Salir</button> |
+                        <button href="#!" onclick="calcularConsumo(event)" class="btn btn-primary">Cosultar</button>
+                    </div>
+                    <div class="row" id="tablas">
+                        <table class="responsive-table" id="miTabla" name="miTabla">
+                            <h5>Datos Consumo Usuario</h5>
+                            <thead>
+                                <tr>
+                                    <th>Valor (Kwh)</th>
+                                    <th>Consuno Dia</th>
+                                    <th>valor UND(kwh)</th>
+                                    <th>Precio Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" id="Valor" name="Valor" readonly></input></td>
+                                    <td> <input type="text" id="Consuno" name="Consuno"></td>
+                                    <td> <input type="text" id="valor_UND" name="valor_UND"></td>
+                                    <td> <input type="text" id="Total" name="Total"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="responsive-table" id="miTabla" name="miTabla">
+                            <h5>Datos energia eolica</h5>
+                            <p>la energia eolica se realizo como ejemplo que produciera 1 kwh con un vientos inestables
+                                durante
+                                2 horas al dia, con base a estos datos se compara el ahorro en kwh y valores con los
+                                datos del usuario.
+                            </p>
+                            <thead>
+                                <tr>
+                                    <th>(Kwh) producido</th>
+                                    <th>periodo horas</th>
+                                    <th>producido (kwh) dia</th>
+                                    <th>valor (kwh)</th>
+                                    <th>Valor Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" id="Valore" name="Valore" readonly></input></td>
+                                    <td> <input type="text" id="Consunoe" name="Consunoe"></td>
+                                    <td> <input type="text" id="valor_UNDe" name="valor_UNDe"></td>
+                                    <td> <input type="text" id="Totale" name="Totale"></td>
+                                    <td> <input type="text" id="Totaleo" name="Totaleo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>Ahorro con la energia eolica: </h5>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">battery_charging_full</i>
+                            <input type="number" id="ahorro" name="ahorro">
+                            <label for="ahorro">ahorro en kwh</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">monetization_on</i>
+                            <input type="number" id="ahorrov" name="ahorrov">
+                            <label for="ahorrov">ahorro en valores</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">done</i>
+                            <input type="number" id="ahorro1" name="ahorro1">
+                            <label for="ahorro1">Valor de su Factura</label>
+                        </div>
+                    </div>
+                    <section id="grafico" style="width: 60%; height: 60%; margin: auto;">
+                        <h5>Grafica</h5>
+                        <canvas id="energiaUser" width="100" height="100"></canvas>
+                    </section>
                 </div>
         </section>
+        <br>
     </main>
+    <footer>
+        <p>Copy 2025 - Bootcamp - Todos los derechos reservados</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../script/script.js"></script>
 </body>
 

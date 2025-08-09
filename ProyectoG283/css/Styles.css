@@ -1,4 +1,29 @@
-body{
+ /* @font-face {
+  font-family: "bebas";
+  src: url("../fonts/BebasNeue.otf") format("otf");
+}  */
+
+@font-face {
+	font-family: "grechen";
+	src: url("../fonts/GrechenFuemen-Regular.ttf");
+  }
+
+h1,h2,h3,h4,h5,h6, .glitch, nav{
+	color: #0f495d;
+	font-family: "grechen";
+}
+
+ .card{
+    transition: transform 0.3s ease, box-shadown 0.3s ease;
+ }
+ .card:hover{
+    transform: translate(-15px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1);
+ }
+
+
+
+body {
     background: linear-gradient(90deg, rgb(221, 224, 224) 0%, rgb(251, 253, 252) 50%, rgb(248, 240, 171) 100%);
 
 }
@@ -317,6 +342,7 @@ nav ul li a {
     font-size: 18px;
 }
 
+
 .carousel {
     display: flex;
     justify-content: center;
@@ -357,10 +383,12 @@ main section {
 }
 
 .container-parrafo {
-    width: 90%;
+    width: 95%;
     text-align: justify;
 }
-
+.container-parrafo p {
+    font-size: 19px;
+}
 
 #container-Contenido {
     display: flex;
@@ -398,34 +426,57 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     /*Esquinas redondas*/
     font-family: 'Segoe UI', sans-serif;
+    border-radius: 15px;
 }
 
 footer p {
     margin-top: 15px;
+    color: black;
+    font-family: "grechen";
 }
 
 
 
 /* ####################### estilos formularario ###############3 */
-section #Datos_Formulario{
+section #Datos_Formulario {
     width: 85%;
 }
-#Datos_Formulario button{
+
+#Datos_Formulario button {
     margin-left: 50px;
 }
 
-.Contenido-forms{
-background: linear-gradient(90deg, rgb(248, 250, 250) 0%, rgb(231, 233, 232) 50%, rgb(253, 253, 253) 100%);
-border-radius: 15px;
+.Contenido-forms {
+    background: linear-gradient(90deg, rgb(248, 250, 250) 0%, rgb(231, 233, 232) 50%, rgb(253, 253, 253) 100%);
+    border-radius: 15px;
 }
 
-.Contenido-forms h5, h3{
+.Contenido-forms h5,
+h3 {
     text-align: center;
 }
-.Contenido-forms p{
+
+.Contenido-forms p {
     text-align: justify;
 }
 
+.modal-content form {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+#tablas{
+    width: 80%;
+    margin: auto;
+}
+
+/* ####################### estilos historia eolica ###############3 */
 .card-image img {
     width: 100%;      /* Que no se salga de la tarjeta */
     height: auto;     /* Que mantenga la proporción original */
